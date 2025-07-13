@@ -1,0 +1,396 @@
+/*===============================================================*/
+/*MAIN BODY AREA*/
+/*===============================================================*/
+.HomepageMainBody {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+
+/* REFERENCE: https://blinder-nine.vercel.app/      */
+
+
+
+
+
+
+/*===============================================================*/
+/*HEADER AREA*/
+/*===============================================================*/
+
+@media (max-width: 720px) {
+
+  .HeaderBar {
+    padding: 0px 10px !important;
+  }
+
+  .textTitle {
+    display: none;
+  }
+
+  .NavigationBtnSpan{
+    gap: 10px !important;
+  }
+}
+
+.HeaderBar {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  padding: 0px 200px;
+  /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);  */
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+.textTitle{
+  font-size: 30px;
+  color: #061042;
+  font-weight: bold;
+}
+
+
+.SpanFlex{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.NavigationBtnSpan{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+}
+.NavigationBtnSpan a{
+  font-size: 16px;
+  font-weight: 500;
+  color: #061042;
+}
+
+.CommonButton{
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #061042;
+  padding: 7px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.CommonButton:hover,
+.CommonButton:focus{
+  background-color: #1a276a;
+}
+
+.RareButton{
+  font-size: 16px;
+  font-weight: 500;
+  color: #061042;
+  border: solid 1px #dcdcdc;
+  background-color: #ffffff;
+  padding: 7px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.RareButton:hover,
+.RareButton:focus{
+  color: #fff;
+  border: solid 1px #061042;
+  background-color: #1a276a;
+}
+
+.Active{
+  font-size: 10px !important;
+  background-color: #0d1b62;
+}
+
+.BlurryBackground{
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(8, 8, 50, 0.7); 
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+
+
+
+
+
+/*===============================================================*/
+/*SECTION AREA*/
+/*===============================================================*/
+
+
+@media (max-width: 720px) {
+
+  .HeroSection h1{
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
+
+  .HeroLowerFlex {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.HeroSection {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.HeroSection h1{
+  font-weight: bolder;
+  color: #061042;
+
+  background: linear-gradient(90deg, #061042, #0d26b5); /* Adjust colors and direction as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-size: 65px;
+  text-align: center;
+  line-height: 75px;
+}
+
+.HeroSection p{
+  text-align: center;
+}
+
+.SectionArea {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroLowerFlex{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.HeroLowerTitle{
+  color: #061042;
+  padding-bottom: 25px;
+  font-size: 17px;
+}
+
+
+
+.HeroLowerBoxDesign{
+  color: #061042;
+  border: solid 1px #dcdcdc;
+  background-color: #ffffff;
+  padding: 7px 20px;
+  border-radius: 7px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.HeroLowerBoxDesign:hover,
+.HeroLowerBoxDesign:focus{
+  color: #fff !important;
+  background-color: #1a276a;
+}
+
+.HeroLowerBoxDesign {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+ }
+ 
+ .HeroLowerBoxDesign::before,
+ .HeroLowerBoxDesign::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+ }
+ 
+ .HeroLowerBoxDesign::before {
+  left: -10px;
+  background: #061042;
+ }
+ 
+ .HeroLowerBoxDesign::after {
+  right: -10px;
+  background: #1a276a;
+ }
+ 
+ .HeroLowerBoxDesign:hover::before,
+ .HeroLowerBoxDesign:hover::after {
+  width: 58%;
+ }
+ 
+ .HeroLowerBoxDesign:hover span {
+  color: #1a276a;
+  transition: 0.3s;
+ }
+ 
+ .HeroLowerBoxDesign span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+ }
+ 
+
+
+
+/*===============================================================*/
+/*ABOUT AREA*/
+/*===============================================================*/
+
+@media (max-width: 720px) {
+
+  .AboutMainDiv{
+    grid-template-columns: 1fr !important;
+    padding: 0px 10px !important;
+  }
+
+  .AboutContentArea{
+    text-align: center;
+    order: 2;
+  }
+}
+
+.LineInTitle {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #0d1b62; 
+  margin: 0px 10px;
+  margin-top: 23px;
+}
+
+.AboutTitle{
+  padding-top: 150px;
+  font-size: 35px;
+  color: #061042;
+  font-weight: bold;
+  display: flex;
+}
+
+.AboutHeader{
+  font-size: 25px;
+  color: #061042;
+  
+  background: linear-gradient(90deg, #061042, #092ae1); /* Adjust colors and direction as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-weight: bold;
+}
+
+.AboutMainDiv{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 0px 120px;
+}
+
+.AboutContentArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutContentArea p{
+font-size: 17px;
+}
+
+
+
+
+
+
+
+/*===============================================================*/
+/*FOOTER AREA*/
+/*===============================================================*/
+@media (max-width: 720px) {
+
+  .FooterContentFlex{
+    flex-direction: column !important;
+    gap: 20px;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .LinkArea{
+    text-align: center;
+    order: 2;
+  }
+}
+
+
+.FooterArea {
+  padding-top: 100px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.FooterContentFlex{
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.FooterArea p{
+  font-size: 14px;
+  color: #848484;
+
+}
+
+.LinkArea{
+  display: flex;
+}
+.LinkButtons{
+  color: #848484;
+  transition: 0.3s;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin: 3px 10px;
+}
+.LinkButtons:hover{
+  color: #626262;
+}
+.LinkButtons:focus{
+  outline: none;
+  color: #626262;
+}
+.CustomLine {
+  width: 95%;
+  border-top: 1px solid #d5d5d5;
+}
