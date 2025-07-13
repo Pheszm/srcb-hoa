@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",
+    "bcryptjs": "^3.0.2",
     "chart.js": "^4.5.0",
     "face-api.js": "^0.22.2",
     "next": "15.3.5",
