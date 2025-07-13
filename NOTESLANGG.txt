@@ -1,0 +1,42 @@
+{/*
+import { NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+
+export function middleware(req) {
+    const userId = req.cookies.get('User_id');
+    const userRole = req.cookies.get('User_role');
+
+    if (!userId) {
+        return NextResponse.redirect(new URL('/', req.url));
+    }
+
+    if (userRole === 'admin') {
+        return NextResponse.redirect(new URL('/Admin', req.url));
+    } else if (userRole === 'student') {
+        return NextResponse.redirect(new URL('/Student', req.url));
+    } else if (userRole === 'instructor') {
+        return NextResponse.redirect(new URL('/Instructor', req.url));
+    }
+
+    return NextResponse.redirect(new URL('/', req.url));
+}
+
+export const config = {
+    matcher: ['/Admin', '/Student', '/Instructor'],
+};
+
+*/}
+
+{/*
+    HOW TO LOGIN
+import { setCookie } from 'nookies';
+
+export default async function loginHandler(req, res) {
+  // After validating user login and fetching user data, set cookies
+  setCookie({ res }, 'User_id', user.id, { path: '/' });
+  setCookie({ res }, 'User_role', user.role, { path: '/' });
+  
+  res.status(200).json({ message: 'Login successful' });
+}
+    
+    */}
